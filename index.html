@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AABBCC Care Counselling | Professional Support</title>
+    <style>
+        /* CSS Variables for Brand Colors */
+        :root {
+            --primary-sage: #8da99d;
+            --dark-slate: #2c3e50;
+            --soft-cream: #f9fbf9;
+            --accent-gold: #b5a48b;
+            --text-gray: #555;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--text-gray);
+            background-color: var(--soft-cream);
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-sage);
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-slate);
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(141, 169, 157, 0.8), rgba(141, 169, 157, 0.8)), 
+                        url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; max-width: 600px; }
+
+        .btn {
+            background: var(--dark-slate);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover { background: var(--primary-sage); }
+
+        /* Container & Sections */
+        .container { max-width: 1000px; margin: auto; padding: 60px 20px; }
+        
+        h2 { color: var(--dark-slate); text-align: center; margin-bottom: 40px; }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-left: 4px solid var(--primary-sage);
+        }
+
+        footer {
+            background: var(--dark-slate);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">AABBCC CARE</div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Compassionate Support for Life’s Transitions</h1>
+        <p>Professional, confidential counselling tailored to your unique journey in Victoria and via Telehealth.</p>
+        <a href="mailto:jeff@example.com" class="btn">Book a Free Consultation</a>
+    </header>
+
+    <section id="about" class="container">
+        <div class="about-grid">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=500&q=80" alt="Counselling Space" style="width:100%; border-radius:10px;">
+            <div>
+                <h2>Meet Jeff</h2>
+                <p>Hello, I’m Jeff. I founded AABBCC Care Counselling to provide a safe, non-judgmental space for individuals to explore their challenges.</p>
+                <p>With a background in professional consulting and data analysis, I understand the pressure of high-stakes corporate environments, but also the profound shift of navigating family life and personal transitions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background-color: #f0f4f2;">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Individual Support</h3>
+                    <p>One-on-one sessions focusing on personal growth and emotional health.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Parental Guidance</h3>
+                    <p>Support for parents navigating work-life balance and childhood sensitivities.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Telehealth</h3>
+                    <p>Secure video consultations from the comfort of your own home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <strong>What can I expect in our first session?</strong>
+            <p>Our initial meeting is about connection. We’ll discuss what’s on your mind and how we can work together.</p>
+        </div>
+        <div class="faq-item">
+            <strong>Is my information confidential?</strong>
+            <p>Absolutely. Your privacy and trust are the foundation of my therapeutic practice.</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h3>AABBCC Care Counselling</h3>
+        <p>Monash Area, Victoria | Available Australia-wide via Telehealth</p>
+        <p>Email: contact@aabbcccare.com.au</p>
+        <p style="font-size: 0.8rem; opacity: 0.7;">© 2026 AABBCC Care Counselling | ABN: [Your ABN Here]</p>
+    </footer>
+
+</body>
+</html>
