@@ -3,135 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TenderCare Counselling | Professional Support</title>
+    <title>Tendercare Counselling | Compassionate Support in Victoria</title>
     <style>
-        /* CSS Variables for Brand Colors */
         :root {
-            --primary-sage: #8da99d;
-            --dark-slate: #2c3e50;
-            --soft-cream: #f9fbf9;
-            --accent-gold: #b5a48b;
-            --text-gray: #555;
+            --primary-teal: #008080; 
+            --dark-navy: #1a2b3c;
+            --light-gray: #f8f9fa;
+            --white: #ffffff;
+            --text-main: #444;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
+            color: var(--text-main);
             line-height: 1.6;
-            color: var(--text-gray);
-            background-color: var(--soft-cream);
+        }
+
+        /* Top Contact Bar */
+        .top-bar {
+            background-color: var(--light-gray);
+            padding: 8px 8%;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 0.9rem;
+        }
+
+        .phone-link {
+            color: var(--primary-teal);
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
         }
 
         /* Navigation */
         nav {
-            background: white;
-            padding: 1rem 5%;
+            background: var(--white);
+            padding: 20px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             z-index: 1000;
         }
 
         .logo {
             font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-sage);
-            letter-spacing: 1px;
+            font-weight: 700;
+            color: var(--primary-teal);
+            letter-spacing: -0.5px;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--dark-slate);
-            margin-left: 20px;
+            color: var(--dark-navy);
+            margin-left: 25px;
             font-weight: 500;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)), 
-            url('hero-bg.jpg'); /* Use your exact filename here */
+            background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), 
+                        url('hero-bg.jpg'); /* Ensure this is your JPEG file */
             background-size: cover;
             background-position: center;
-            height: 70vh; /* Slightly taller to show more of the image */
+            height: 70vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.96);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             text-align: center;
-            color: white;
-            padding: 0 20px;
+            max-width: 550px;
         }
 
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; max-width: 600px; }
+        .hero-card h1 { color: var(--primary-teal); font-size: 2.8rem; margin: 0 0 15px 0; }
 
-        .btn {
-            background: var(--dark-slate);
+        .btn-pill {
+            background: var(--primary-teal);
             color: white;
-            padding: 12px 30px;
+            padding: 16px 40px;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            transition: background 0.3s;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 700;
+            margin-top: 25px;
+            transition: 0.3s;
         }
 
-        .btn:hover { background: var(--primary-sage); }
+        .btn-pill:hover { background: var(--dark-navy); transform: translateY(-2px); }
 
-        /* Container & Sections */
-        .container { max-width: 1000px; margin: auto; padding: 60px 20px; }
+        /* Services Grid */
+        .section-padding { padding: 80px 8%; }
         
-        h2 { color: var(--dark-slate); text-align: center; margin-bottom: 40px; }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-
-        .faq-item {
-            background: white;
-            margin-bottom: 15px;
-            padding: 20px;
-            border-left: 4px solid var(--primary-sage);
-        }
-
-        footer {
-            background: var(--dark-slate);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 40px;
         }
 
-        /* Responsive */
+        .service-tile {
+            height: 380px;
+            border-radius: 25px; /* Extra rounded like the example site */
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .service-label {
+            background: var(--primary-teal);
+            color: white;
+            width: 100%;
+            padding: 25px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background: var(--dark-navy);
+            color: white;
+            padding: 60px 8% 30px;
+            text-align: center;
+        }
+
         @media (max-width: 768px) {
-            .about-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2rem; }
+            .hero-card { margin: 20px; padding: 30px; }
+            .hero-card h1 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
+    <div class="top-bar">
+        <a href="tel:0400000000" class="phone-link">
+            <span style="color: #888; font-weight: 400; margin-right: 10px;">Call Yunshu:</span>
+            0400 000 000
+        </a>
+    </div>
+
     <nav>
-        <div class="logo">TenderCare CARE</div>
+        <div class="logo">TenderCare</div>
         <div>
             <a href="#about">About</a>
             <a href="#services">Services</a>
@@ -140,77 +165,33 @@
     </nav>
 
     <header class="hero">
-        <h1>Compassionate Support for Life’s Transitions</h1>
-        <p>Professional, confidential counselling tailored to your unique journey in Victoria and via Telehealth.</p>
-        <a href="mailto:jeff@example.com" class="btn">Book a Free Consultation</a>
+        <div class="hero-card">
+            <h1>Tendercare Counselling</h1>
+            <p>Compassionate, person-centred support for life's transitions. Based in Monash, Victoria and available Australia-wide via Telehealth.</p>
+            <a href="mailto:jeff@example.com" class="btn-pill">Make an Enquiry</a>
+        </div>
     </header>
 
-    <section id="about" class="container">
-        <div class="about-grid">
-            <img src="headshot.jpg" alt="Yunshu - TenderCare Counselling" style="width:100%; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-            <div>
-                <h2>Meet Yunshu</h2>
-                <p>Hello, I’m Yunshu. I founded TenderCare Counselling to provide a safe, non-judgmental space for individuals to explore their challenges.</p>
-                <p>With a background in professional consulting and data analysis, I understand the pressure of high-stakes corporate environments, but also the profound shift of navigating family life and personal transitions.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" style="background-color: #f0f4f2;">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Individual Support</h3>
-                    <p>One-on-one sessions focusing on personal growth and emotional health.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Parental Guidance</h3>
-                    <p>Support for parents navigating work-life balance and childhood sensitivities.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Telehealth</h3>
-                    <p>Secure video consultations from the comfort of your own home.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <strong>What can I expect in our first session?</strong>
-            <p>Our initial meeting is about connection. We’ll discuss what’s on your mind and how we can work together.</p>
-        </div>
-        <div class="faq-item">
-            <strong>Is my information confidential?</strong>
-            <p>Absolutely. Your privacy and trust are the foundation of my therapeutic practice.</p>
-        </div>
-    </section>
-    <section id="testimonials" style="background-color: white;">
-    <div class="container">
-        <h2>What Our Clients Say</h2>
+    <section id="services" class="section-padding">
+        <h2 style="text-align: center; color: var(--dark-navy); font-size: 2.2rem;">Our Services</h2>
         <div class="services-grid">
-            <div class="service-card" style="font-style: italic;">
-                <p>"Yunshu provided such a grounding space during a very chaotic career transition. His background in consulting meant he truly 'got' the corporate pressure I was under."</p>
-                <p><strong>- Sarah M., Monash</strong></p>
+            <div class="service-tile" style="background-image: url('service-individual.jpg');">
+                <div class="service-label">Individual Counselling</div>
             </div>
-            <div class="service-card" style="font-style: italic;">
-                <p>"As a parent, I felt so heard. Yunshu's empathy regarding childhood sensitivities helped our family find a new sense of balance we didn't think was possible."</p>
-                <p><strong>- David L., Victoria</strong></p>
+            <div class="service-tile" style="background-image: url('service-parent.jpg');">
+                <div class="service-label">Parental Support</div>
             </div>
-            <div class="service-card" style="font-style: italic;">
-                <p>"The Telehealth sessions are so convenient. I was nervous about online counselling, but Yunshu made it feel just as personal as being in the same room."</p>
-                <p><strong>- Anonymous</strong></p>
+            <div class="service-tile" style="background-image: url('service-telehealth.jpg');">
+                <div class="service-label">Telehealth Sessions</div>
             </div>
         </div>
-    </div>
     </section>
-    <footer id="contact">
-        <h3>TenderCare Counselling</h3>
-        <p>Monash Area, Victoria | Available Australia-wide via Telehealth</p>
-        <p>Email: contact@TenderCarecare.com.au</p>
-        <p style="font-size: 0.8rem; opacity: 0.7;">© 2026 TenderCare Care Counselling | ABN: [Your ABN Here]</p>
+
+    <footer>
+        <p><strong>Tendercare Counselling</strong></p>
+        <p>Victoria, Australia | ABN: [Your ABN]</p>
+        <p style="opacity: 0.6; font-size: 0.8rem; margin-top: 20px;">© 2026 Tendercare Counselling. All Rights Reserved.</p>
+        <p><a href="policy.html" style="color:white; text-decoration:none; font-size:0.8rem; opacity:0.7;">View Privacy & Cancellation Policy</a></p>
     </footer>
 
 </body>
